@@ -1,0 +1,56 @@
+============================================================
+Relatório de Extração — MediaPipe Hands
+============================================================
+Classe      Total  Detectadas  Descartadas    Taxa
+------------------------------------------------------------
+A            3000        2373          627   79.1%
+B            3000        2291          709   76.4%
+C            3000        2217          783   73.9%
+D            3000        2632          368   87.7%
+E            3000        2392          608   79.7%
+F            3000        2960           40   98.7%
+G            3000        2665          335   88.8%
+H            3000        2535          465   84.5%
+I            3000        2562          438   85.4%
+J            3000        2692          308   89.7%
+K            3000        2762          238   92.1%
+L            3000        2665          335   88.8%
+M            3000        2210          790   73.7%
+N            3000        1819         1181   60.6%  ⚠
+O            3000        2417          583   80.6%
+P            3000        2240          760   74.7%
+Q            3000        2293          707   76.4%
+R            3000        2676          324   89.2%
+S            3000        2674          326   89.1%
+T            3000        2448          552   81.6%
+U            3000        2581          419   86.0%
+V            3000        2620          380   87.3%
+W            3000        2562          438   85.4%
+X            3000        2302          698   76.7%
+Y            3000        2655          345   88.5%
+Z            3000        2504          496   83.5%
+del          3000        2260          740   75.3%
+space        3000        2342          658   78.1%
+------------------------------------------------------------
+TOTAL       84000       69349        14651   82.6%
+
+Shape de X   : (69349, 63)
+Shape de y   : (69349,)
+Nº de classes: 28
+Classes      : ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'del', 'space']
+Tempo total  : 3487.4s
+
+Observações:
+  • Classe 'nothing' tende a ter baixa detecção (sem mão na imagem).
+  • Classes com taxa < 70% estão marcadas com ⚠ — podem precisar
+    de ajuste no min_detection_confidence ou revisão das imagens.
+  • Cada imagem é tentada até 5 vezes (original + 4 transformações)
+    antes de ser descartada: flip, contraste (CLAHE), upscale, flip+contraste.
+
+Arquivos gerados:
+  dataset/features\landmarks.csv
+  dataset/features\X.npy
+  dataset/features\y.npy
+  dataset/features\label_map.npy
+  dataset/features\extraction_report.txt
+============================================================
